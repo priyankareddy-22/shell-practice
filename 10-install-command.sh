@@ -8,8 +8,11 @@ then
    else
     echo "You are running with root access"
     fi
-
-    dnf insatll mysql -y
+    dnf list intalled mysql 
+    if[ $? -ne 0 ]
+     then
+     echo "MYSQL is not installed ... going to install it"
+     dnf insatll mysql -y
 
     if [ $? -eq 0 ]
     then
@@ -18,3 +21,8 @@ then
      echo "Installing MYSQL is ... FAILURE"
      exit 1
      fi
+     else
+     echo "MYSQL is already installed...Nothing to do"
+     exit 1
+     fi
+
