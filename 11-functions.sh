@@ -8,22 +8,25 @@ then
    else
     echo "You are running with root access"
     fi
+    VALIDATE(){
 
     dnf list intalled mysql
 
       then
      echo "MYSQL is not installed ... going to install it"
      dnf insatll mysql -y
-
-    if [ $? -eq 0 ]
+     
+     if [ $? -eq 0 ]
     then
-     echo "Installing MYSQL is ... SUCCESS"
+     echo "Installing python is ... SUCCESS"
 
      else
-     echo "Installing MYSQL is ... FAILURE"
+     echo "Installing python is ... FAILURE"
      exit 1
      fi
 
+    
+    }
      else
      echo "MYSQL is already installed...Nothing to do"
      
