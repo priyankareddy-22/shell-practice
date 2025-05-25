@@ -9,12 +9,12 @@ then
     echo "You are running with root access"
     fi
 
-    dnf insatll mysqlyugggggggh -y
+    dnf insatll mysql -y
 
     if [ $? -eq 0 ]
     then
      echo "Installing MYSQL is ... SUCCESS"
      else
      echo "Installing MYSQL is ... FAILURE"
-     #exit 1
+     exit 1
      fi
