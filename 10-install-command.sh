@@ -9,7 +9,7 @@ then
     echo "You are running with root access"
     fi
 
-    dnf insatll mysql -y
+    dnf insatll mysqlyugggggggh -y
 
     if [ $? -eq 0 ]
     then
